@@ -46,6 +46,7 @@ $threeDSDetails = $result->customer->paymentMethods[0]->verification->threeDSecu
 <ul>
   <li>Successful No Challenge: <span style="background-color: #E6E6E6;font-weight: bold;">4000000000001000</span></li>
   <li>Successful Challenge: <span style="background-color: #E6E6E6;font-weight: bold;">4000000000001091</span></li>
+  <li>Failed No Challenge: <span style="background-color: #E6E6E6;font-weight: bold;">4000000000001018</span></li>
   <li>Error on Lookup: <span style="background-color: #E6E6E6;font-weight: bold;">4000000000001067</span></li>
 </ul>
 <!-- If you wanna have user inputs for this. -->

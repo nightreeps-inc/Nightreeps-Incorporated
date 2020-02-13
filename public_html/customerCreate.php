@@ -43,6 +43,7 @@ if ($result->success) {
       <h2><?php echo $title;?></h2>
       <br>
       <p>Here is the 3D Secure info</p>
+      <div style="overflow-y: scroll;">
       <table>
         <th>Verification ID</th>
         <th>Liability Shifted</th>
@@ -57,6 +58,7 @@ if ($result->success) {
           <?php echo $message;?>
           </tr>
       </table>
+    </div>
   </div>
 </div>
     </body>

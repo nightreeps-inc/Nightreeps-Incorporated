@@ -46,7 +46,7 @@ if ($result->success) {
       <p>Here is the 3D Secure info</p>
       <div style="overflow-y: scroll;">
       <table>
-        <th>Merchant ID<th>
+        <th>Merchant ID</th>
         <th>Verification ID</th>
         <th>Liability Shifted</th>
         <th>Liability Shifted Possible</th>

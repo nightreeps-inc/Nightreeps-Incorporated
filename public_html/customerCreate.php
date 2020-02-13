@@ -19,6 +19,7 @@ if ($result->success) {
   $dudeStuff = $result->customer->paymentMethods[0]->verification->threeDSecureInfo;
   // print_r('<div class="main"><pre class="code"><code class="prettyprint lang-php">' . $dudeStuff . '</code></pre></div>');
   $message = "
+  <td>tt8srtpp8yfgfghp</td>
   <td> {$result->customer->paymentMethods[0]->verification->id} </td>
   <td> {$dudeStuff->liabilityShifted} </td>
   <td> {$dudeStuff->liabilityShiftPossible} </td>
@@ -45,6 +46,7 @@ if ($result->success) {
       <p>Here is the 3D Secure info</p>
       <div style="overflow-y: scroll;">
       <table>
+        <th>Merchant ID<th>
         <th>Verification ID</th>
         <th>Liability Shifted</th>
         <th>Liability Shifted Possible</th>

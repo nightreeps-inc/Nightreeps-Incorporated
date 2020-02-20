@@ -28,5 +28,5 @@
   </div>
 </div>
     </body>
-<div style="text-align:center;padding:10px;margin-top:7px;"> {•̃̾_•̃̾} </div>
+<div style="text-align:center;padding:10px;margin-top:7px;"> <p>The Demos on this page use the following merchant ID: tt8srtpp8yfgfghp</p><p>{•̃̾_•̃̾}</p> </div>
 </html>

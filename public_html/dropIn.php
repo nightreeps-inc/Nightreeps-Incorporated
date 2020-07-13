@@ -5,7 +5,9 @@
 <?php require_once("../includes/braintree_init.php"); ?>
 <body style="font-family:Verdana;">
 <!-- generating a client token -->
-  <script>var client_token = "<?php echo($gateway->clientToken()->generate());?>"
+  <script>var client_token = "<?php echo($clientToken = $gateway->clientToken()->generate([
+    // "customerId" => 191421889
+]));?>"
   </script>
 <div style="overflow:auto">
   <div class="menu">
@@ -83,7 +85,7 @@ $threeDSDetails = $result->customer->paymentMethods[0]->verification->threeDSecu
               phoneNumber: "8158288282",
               streetAddress: "24123 Green Herron Drive",
               locality: "Channahon",
-              region: "Illinois",
+              region: "IL",
               postalCode: "60410",
               countryCodeAlpha2: "US"
             }
@@ -92,6 +94,13 @@ $threeDSDetails = $result->customer->paymentMethods[0]->verification->threeDSecu
           braintree.dropin.create({
             authorization: client_token,
             container: '#dropin-container',
+            card: {
+    cardholderName: {
+      required: false
+      // to make cardholder name required
+      // required: true
+    }
+  },
             threeDSecure: true
           }, function (createErr, instance) {
             button.addEventListener('click', function () {

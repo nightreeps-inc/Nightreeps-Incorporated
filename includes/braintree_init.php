@@ -1,7 +1,7 @@
 <?php
 require_once("../vendor/autoload.php");
 
-$gateway = new Braintree_Gateway([
+$gateway = new Braintree\Gateway([
   'environment' => 'sandbox',
   'merchantId' => 'tt8srtpp8yfgfghp',
   'publicKey' => 't93rv9zd344vn2td',

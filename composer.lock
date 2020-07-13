@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0cb7a1a516ed73be8b87463049bad015",
+    "content-hash": "05f7f7047b4bc5aa7af033fe0b3a4766",
     "packages": [
         {
             "name": "braintree/braintree_php",
-            "version": "4.5.0",
+            "version": "5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/braintree/braintree_php.git",
-                "reference": "4aa200601e126183a572133d7ea2037de44b3d2d"
+                "reference": "6cf3447ecd0303caa6f2d4f22b653dc5c71b4589"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/braintree/braintree_php/zipball/4aa200601e126183a572133d7ea2037de44b3d2d",
-                "reference": "4aa200601e126183a572133d7ea2037de44b3d2d",
+                "url": "https://api.github.com/repos/braintree/braintree_php/zipball/6cf3447ecd0303caa6f2d4f22b653dc5c71b4589",
+                "reference": "6cf3447ecd0303caa6f2d4f22b653dc5c71b4589",
                 "shasum": ""
             },
             "require": {
@@ -33,9 +33,6 @@
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "Braintree": "lib/"
-                },
                 "psr-4": {
                     "Braintree\\": "lib/Braintree"
                 }
@@ -51,7 +48,7 @@
                 }
             ],
             "description": "Braintree PHP Client Library",
-            "time": "2019-10-28T16:05:37+00:00"
+            "time": "2020-06-15T19:02:23+00:00"
         }
     ],
     "packages-dev": [],

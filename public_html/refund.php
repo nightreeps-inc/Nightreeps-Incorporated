@@ -29,12 +29,10 @@ $result = $gateway->transaction()->refund($txnID, $amount);
     $title = "Failure :(";
       $message = "
       <th>Transaction ID</th>
-      <th>Customer ID</th>
       <th>Status</th>
       <th>Amount</th>
       <tr>
         <td> {$result->transaction->id} </td>
-        <td> {$customerID} </td>
         <td> {$result->transaction->status} </td>
         <td> {$result->transaction->amount} </td>
       </tr>";

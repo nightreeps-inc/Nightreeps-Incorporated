@@ -237,6 +237,25 @@ font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,U
 .braintree-hosted-fields-valid {
 }
 
+.field{
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+   height: 40px;
+   box-sizing: border-box;
+   width: 20%;
+   padding: 12px;
+   box-shadow: none;
+   font-size: 16px;
+   border-radius: 5px;
+   border: 1px solid #dddddd;
+   line-height: 20px;
+   /* background: #fcfcfc; */
+   background: #ffffff;
+   /* background: linear-gradient(to right, white 50%, #fcfcfc 50%); */
+   background-size: 200% 100%;
+   background-position: right bottom;
+   transition: all 300ms ease-in-out;
+}
+
 #cardForm {
  max-width: 50.75em;
  margin: 0 auto;

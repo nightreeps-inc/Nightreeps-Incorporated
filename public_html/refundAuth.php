@@ -15,7 +15,7 @@ $txnID = $result->transaction->id;
 // sleep(1.5);
 ?>
 <?php
-sleep(10);
+sleep(1.5);
 $transaction = $gateway->testing()->settle($result->transaction->id);
 get_class($transaction)?>
 <body style="font-family:Verdana;">

@@ -63,6 +63,32 @@ get_class($transaction)?>
         <li>Refund the transaction for a decline amount, such as 2004.</li>
       </ol>
       <h3>Demonstration</h3>
+      <p>Want to test in your own sandbox? Plug the following script into your PHP Polyglot!</p>
+        <button data-toggle="collapse" data-target="#c2" class="button">Show/Hide Polyglot example</button>
+        <div id="c2" class="collapse">
+    <pre class="code">
+      <code id="decode" class="prettyprint">$result = $gateway->transaction()->sale([
+  'amount' => '3001',
+  'paymentMethodNonce' => 'fake-valid-nonce',
+  'options' => [
+    'submitForSettlement' => True
+  ]
+]);
+if ($result->success) {
+  echo "Transaction Successful for ID ";
+  echo $result->transaction->id . "\n";
+  $settledResult = $gateway->testing()->settle($result->transaction->id);
+  echo "Refunding transaction . . ." . "\n";
+  $result = $gateway->transaction()->refund($result->transaction->id, 2004);
+  echo $result->message . "\n";
+} else {
+  echo "Error";
+  print_r($result->message);
+};
+      </code>
+    </pre>
+    <br>
+        </div>
       <p>This demonstration uses the following transaction call when the page is loaded:</p>
       <pre class="code">
         <code class="prettyprint">//Create the sale
@@ -115,12 +141,11 @@ $settledResult = $gateway->testing()->settle($transactionId);</code></pre>
       }
       </script>
     </div>
-
     <div class="right">
       <!-- empty div for possible content. -->
       <p></p>
     </div>
   </div>
 
-  <div style="text-align:center;padding:10px;margin-top:7px;"> <p>The Demos on this page use the following merchant ID: tt8srtpp8yfgfghp</p><p>{•̃̾_•̃̾}</p> </div>
+  <div style="text-align:center;padding:10px;margin-top:7px;"> <p><br><br><br><br>The Demos on this page use the following merchant ID: tt8srtpp8yfgfghp</p><p>{•̃̾_•̃̾}</p> </div>
   </html>

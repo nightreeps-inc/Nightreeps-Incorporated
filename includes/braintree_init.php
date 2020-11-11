@@ -9,7 +9,7 @@ $gateway = new Braintree\Gateway([
 ]);
 
 // Nicks AIB Sandbox
-// $gateway = new Braintree_Gateway([
+// $gateway = new Braintree\Gateway([
 //   'environment' => 'sandbox',
 //   'merchantId' => 'cdrsbfyxsb24hz4v',
 //   'publicKey' => 'xtyrsdhg765vs253',

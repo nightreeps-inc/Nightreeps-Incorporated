@@ -24,6 +24,7 @@ if ($result->success){
   };
   $result = $gateway->transaction()->sale([
     'amount' => $amount,
+    'merchantAccountId' => 'MindSapling-CAD',
     'options' => [
       'submitForSettlement' => True
     ],

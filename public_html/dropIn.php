@@ -6,7 +6,10 @@
 <body style="font-family:Verdana;">
 <!-- generating a client token -->
   <script>var client_token = "<?php echo($clientToken = $gateway->clientToken()->generate([
-    // "customerId" => 191421889
+    // "customerId" => 191421889,
+    // Nick customer "customerId" => 591852991
+    // "merchantAccountId" => "WrongDude"
+    'merchantAccountId' => 'MindSapling-CAD'
 ]));?>"
   </script>
 <div style="overflow:auto">
@@ -92,6 +95,8 @@ $threeDSDetails = $result->customer->paymentMethods[0]->verification->threeDSecu
           };
           console.log(threeDSecureParameters.email);
           braintree.dropin.create({
+            vaultManager: true,
+            //7:15.30
             authorization: client_token,
             container: '#dropin-container',
             card: {

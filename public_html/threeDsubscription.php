@@ -29,7 +29,7 @@ console.log("client token made for " + <?php echo($cxID)?>)
 <div class="main">
   <h2>3D Secure + Vault + Drop-in UI</h2>
   <h3>A streamlined approach</h3>
-  <p>Did you know that the Drop-in UI&rsquo;s auto-vaulting feature allows for a more streamlined 3D Secure flow for Vaulting cards? Well now you do! Let me explain. Currently we are recommending flows to all merchants that require them to pass the nonce to their server, create a payment method, then pass it back to their client for 3D Secure authentication only to then pass it <em>again&nbsp;</em>back to their server to make a subscription/transaction.</p>
+  <p>Did you know that the Drop-in UI&rsquo;s auto-vaulting feature allows for a more streamlined 3D Secure flow for Vaulting cards? Well now you do! Let me explain. Currently we are recommending flows to all merchants that require them to pass the nonce to their server, create a payment method, create a nonce from that payment method, then pass it back to their client for 3D Secure authentication only to then pass it <em>again&nbsp;</em>back to their server to make a subscription/transaction.</p>
   <p>Sounds a little inefficient right? If only there was a way to vault the payment method on the client side . . . WELL THERE IS! Using the Drop-in UI auto-vault capabilities the customer gets their card Vaulted AND authenticated with 3D Secure in <strong>one step</strong>.
   </p>
   <h3>At a glance</h3>

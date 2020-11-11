@@ -39,9 +39,9 @@ console.log("client token made for " + <?php echo($cxID)?>)
       <li>A client token using this customer ID is created</li>
       <li>That client token is used to build the Drop-in UI (much akin to Vault Manager setup)</li>
       <li>The customer enters their payment information</li>
-      <li>Upon submission, the requestPaymentMethod function in the Drop-in UI vaults the card, and authenticates it with 3D Secure &ndash; returning a 3D Secure enriched nonce that represents a payment method token</li>
+      <li>Upon submission, the Drop-in UI Vaults the card, and authenticates it with 3D Secure &ndash; returning a 3D Secure enriched nonce that represents a Vault record</li>
   </ol>
-  <p>This nonce can then be used to do whatever the merchant desires! Update a subscription, create a new one, create a transaction, the only limit is your imagination! Lets go over these steps in a little more detail with some code examples and a live demo below.</p>
+  <p>This nonce can then be used to do whatever the merchant desires! Update a subscription, create a new one, create a transaction, the only limit is your imagination! Detailed code example coming soon.</p>
   <h3>In action</h3>
   <!-- <p>When you landed on this page, a customer ID was created with no payment method. Just an empty ol customer ID.</p>
   <pre class="code"><code class="prettyprint lang-php">$result = $gateway->customer()->create([

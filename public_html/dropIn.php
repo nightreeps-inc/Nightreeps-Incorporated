@@ -9,7 +9,7 @@
     // "customerId" => 191421889,
     // Nick customer "customerId" => 591852991
     // "merchantAccountId" => "WrongDude"
-    'merchantAccountId' => 'MindSapling-CAD'
+    // 'merchantAccountId' => 'MindSapling-CAD'
 ]));?>"
   </script>
 <div style="overflow:auto">
@@ -115,7 +115,7 @@ $threeDSDetails = $result->customer->paymentMethods[0]->verification->threeDSecu
                 document.querySelector('#nonce').value = payload.nonce;
                 var lenonce = payload.nonce;
                 console.log(lenonce);
-                form.submit()
+                // form.submit()
               });
             });
           });

@@ -16,7 +16,7 @@
     <body>
       <h2> Night-what-inc . . ?</h2>
       <p>
-        test Nightreeps Inc. is a growing collection of integrations designed to showcase specific aspects of our products, enable end to end testing, and simply provide a showcase of what our product can do.
+        Nightreeps Inc. is a growing collection of integrations designed to showcase specific aspects of our products, enable end to end testing, and simply provide a showcase of what our product can do.
       <p>
         This project is being managed on the <a href="https://github.com/nightreeps-inc/Nightreeps-Incorporated" target="_blank">Nightreeps-incorporated Git Hub repository</a>. Long term goals are to make Nightreeps-Incorporated an open repository where Treeps can work together to contribute to the project's success.
       <p>

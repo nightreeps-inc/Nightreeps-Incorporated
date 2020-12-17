@@ -16,7 +16,7 @@ $cxID = $result->customer->id;
     "customerId" => $cxID,
     // Nick customer "customerId" => 591852991
     // "merchantAccountId" => "WrongDude"
-    'merchantAccountId' => 'MindSapling-CAD'
+    // 'merchantAccountId' => 'MindSapling-CAD'
 ]));?>"
 console.log(client_token);
 console.log("client token made for " + <?php echo($cxID)?>)
@@ -97,6 +97,13 @@ console.log("client token made for " + <?php echo($cxID)?>)
           console.log(threeDSecureParameters.email);
           braintree.dropin.create({
             vaultManager: true,
+// use below for auto-vault toggle
+            // card: {
+            //   vault: {
+            //     allowVaultCardOverride: true,
+            //     vaultCard: true,
+            //   },
+            // },
             //7:15.30
             authorization: client_token,
             container: '#dropin-container',

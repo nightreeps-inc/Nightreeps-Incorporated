@@ -5,12 +5,14 @@
 <?php require_once("../includes/braintree_init.php"); ?>
 <body style="font-family:Verdana;">
 <!-- generating a client token -->
-  <script>var client_token = "<?php echo($clientToken = $gateway->clientToken()->generate([
+  <script>
+  var client_token = "<?php echo($clientToken = $gateway->clientToken()->generate([
     // "customerId" => 191421889,
-    // Nick customer "customerId" => 591852991
-    // "merchantAccountId" => "WrongDude"
+    // Nick's customer "customerId" => 591852991
+    // "merchantAccountId" => "incorrect-garbage-for-errorsnkgdfsbvjkdfsb"
     // 'merchantAccountId' => 'MindSapling-CAD'
-]));?>"
+    // 'merchantAccountId' => 'dumbBad_instant'
+  ]));?>"
   </script>
 <div style="overflow:auto">
   <div class="menu">
@@ -95,19 +97,29 @@ $threeDSDetails = $result->customer->paymentMethods[0]->verification->threeDSecu
           };
           console.log(threeDSecureParameters.email);
           braintree.dropin.create({
-            vaultManager: true,
+            // vaultManager: true,
             //7:15.30
             authorization: client_token,
             container: '#dropin-container',
             card: {
-    cardholderName: {
-      required: false
-      // to make cardholder name required
-      // required: true
-    }
-  },
+              cardholderName: {
+                required: false
+                // to make cardholder name required
+                // required: true
+              }
+            },
+            vault: {
+              allowVaultCardOverride: true
+            },
             threeDSecure: true
           }, function (createErr, instance) {
+            if (createErr) {
+              // An error in the create call is likely due to
+              // incorrect configuration values or network issues.
+              // An appropriate error will be shown in the UI.
+              console.error(createErr);
+              return;
+            }
             button.addEventListener('click', function () {
               instance.requestPaymentMethod({
                 threeDSecure: threeDSecureParameters
@@ -115,7 +127,7 @@ $threeDSDetails = $result->customer->paymentMethods[0]->verification->threeDSecu
                 document.querySelector('#nonce').value = payload.nonce;
                 var lenonce = payload.nonce;
                 console.log(lenonce);
-                // form.submit()
+                form.submit()
               });
             });
           });

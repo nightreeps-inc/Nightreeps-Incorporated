@@ -7,11 +7,10 @@
 <!-- generating a client token -->
   <script>
   var client_token = "<?php echo($clientToken = $gateway->clientToken()->generate([
-    // "customerId" => 191421889,
+    // "customerId" => 546972291,
     // Nick's customer "customerId" => 591852991
     // "merchantAccountId" => "incorrect-garbage-for-errorsnkgdfsbvjkdfsb"
     // 'merchantAccountId' => 'MindSapling-CAD'
-    // 'merchantAccountId' => 'dumbBad_instant'
   ]));?>"
   </script>
 <div style="overflow:auto">
@@ -84,21 +83,41 @@ $threeDSDetails = $result->customer->paymentMethods[0]->verification->threeDSecu
           var threeDSecureParameters = {
             amount: "1",
             email: "test@nightreeps.inc",
+            exemptionRequested: true,
             billingAddress: {
               givenName: "Johnny", // ASCII-printable characters required, else will throw a validation error
               surname: "Utah", // ASCII-printable characters required, else will throw a validation error
               phoneNumber: "8158288282",
               streetAddress: "24123 Green Herron Drive",
-              locality: "Channahon",
-              region: "IL",
+              locality: "",
+              region: "",
               postalCode: "60410",
               countryCodeAlpha2: "US"
-            }
+            },
+
+            additionalInformation: {
+              workPhoneNumber: '8101234567',
+              shippingGivenName: 'Jill',
+              shippingSurname: 'Doe',
+              shippingPhone: '8101234567',
+              shippingAddress: {
+                streetAddress: '555 Smith St.',
+                extendedAddress: '#5',
+                locality: '',
+                region: 'CA',
+                postalCode: '12345',
+                countryCodeAlpha2: 'US'
+              }
+            },
+
           };
           console.log(threeDSecureParameters.email);
           braintree.dropin.create({
             // vaultManager: true,
             //7:15.30
+            paypal: {
+  flow: 'vault'
+},
             authorization: client_token,
             container: '#dropin-container',
             card: {
@@ -127,7 +146,7 @@ $threeDSDetails = $result->customer->paymentMethods[0]->verification->threeDSecu
                 document.querySelector('#nonce').value = payload.nonce;
                 var lenonce = payload.nonce;
                 console.log(lenonce);
-                form.submit()
+                // form.submit()
               });
             });
           });

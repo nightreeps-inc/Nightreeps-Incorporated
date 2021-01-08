@@ -106,6 +106,7 @@
       <div id="nonce-display" name="nonce-display" hidden></div>
       <input type="hidden" id="nonce" name="nonce" />
     </form>
+    <script src="https://js.braintreegateway.com/web/3.57.0/js/data-collector.min.js"></script>
     <script>
       var form = document.querySelector('#details');
       var submit = document.querySelector('input[type="submit"]');
@@ -119,6 +120,20 @@
           return;
         }
 
+        braintree.dataCollector.create({
+            client: clientInstance,
+            paypal: true
+          }, function (err, dataCollectorInstance) {
+            if (err) {
+              // Handle error in creation of data collector
+              console.log(err)
+              return;
+            }
+            // At this point, you should access the dataCollectorInstance.deviceData value and provide it
+            // to your server, e.g. by injecting it into your form as a hidden input.
+            var deviceData = dataCollectorInstance.deviceData;
+            console.log(JSON.stringify(deviceData));
+          });
             // This example shows Hosted Fields, but you can also use this
             // client instance to create additional components here, such as
             // PayPal or Data Collector.

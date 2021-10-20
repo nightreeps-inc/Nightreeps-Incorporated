@@ -7,7 +7,7 @@
 <!-- generating a client token -->
   <script>
   var client_token = "<?php echo($clientToken = $gateway->clientToken()->generate([
-    // "customerId" => 546972291,
+    "customerId" => 546972291,
     // Nick's customer "customerId" => 591852991
     // "merchantAccountId" => "incorrect-garbage-for-errorsnkgdfsbvjkdfsb"
     // 'merchantAccountId' => 'MindSapling-CAD'
@@ -143,10 +143,13 @@ $threeDSDetails = $result->customer->paymentMethods[0]->verification->threeDSecu
               instance.requestPaymentMethod({
                 threeDSecure: threeDSecureParameters
               },function (requestPaymentMethodErr, payload) {
+                if (requestPaymentMethodErr){
+                  console.log(requestPaymentMethodErr)
+                };
                 document.querySelector('#nonce').value = payload.nonce;
                 var lenonce = payload.nonce;
                 console.log(lenonce);
-                // form.submit()
+                form.submit()
               });
             });
           });

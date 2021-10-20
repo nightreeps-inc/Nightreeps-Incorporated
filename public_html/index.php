@@ -16,14 +16,10 @@
     <body>
       <h2> Night-what-inc . . ?</h2>
       <p>
-        Nightreeps Inc. is a growing collection of integrations designed to showcase specific aspects of our products, enable end to end testing, and simply provide a showcase of what our product can do.
+        Nightreeps Inc. was an end to end testing integration developed by Andres R. The site is no longer under active development, and some of the demonstration integrations may no longer function properly. However, the info included may still be helpful!
       <p>
-        This project is being managed on the <a href="https://github.com/nightreeps-inc/Nightreeps-Incorporated" target="_blank">Nightreeps-incorporated Git Hub repository</a>. Long term goals are to make Nightreeps-Incorporated an open repository where Treeps can work together to contribute to the project's success.
+        This project is being managed on the <a href="https://github.com/nightreeps-inc/Nightreeps-Incorporated" target="_blank">Nightreeps-incorporated Git Hub repository</a>. Feel free to fork the repo and add to it yourself!
       <p>
-        Check out the <a href="https://github.com/nightreeps-inc/Nightreeps-Incorporated" target="_blank"> Git Hub repository </a>to see the amount of work done so far, and be sure to watch or star it to follow along!
-      <p>Lastly, this project is built to be responsive to a lot of screen sizes -- anyone can pull it up on their phone or computer and follow along without any kind of disruption or difficulty of use.
-      <br></br>
-      <p>P.S. this is not a Nightreeps only zone.
 
   </div>
 </div>

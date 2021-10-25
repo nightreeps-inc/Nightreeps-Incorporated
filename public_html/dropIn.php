@@ -7,7 +7,7 @@
 <!-- generating a client token -->
   <script>
   var client_token = "<?php echo($clientToken = $gateway->clientToken()->generate([
-    "customerId" => 546972291,
+    // "customerId" => 546972291,
     // Nick's customer "customerId" => 591852991
     // "merchantAccountId" => "incorrect-garbage-for-errorsnkgdfsbvjkdfsb"
     // 'merchantAccountId' => 'MindSapling-CAD'
